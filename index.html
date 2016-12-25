@@ -1,29 +1,121 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="utf-8">
-  <title>Theka Desi Khana </title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <title>Theka Desi Khana |Get High On Food|</title>
+  <meta name="keywords" content="Food Delivery, Bangalore, Outer Ring Road, ORR, Office Food Delivery, North Indian Food, Punjabi, Punjabi Food, Odia Food">
+  <meta name="description" content="..is a food startup which promises to deliver you home like food across Bangalore. 29 States, 29 different type of meals. In here we...">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <meta property="og:title" content="">
+  <meta property="og:title" content="Theka Desi Khana |Get High On Food|">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="">
+	<meta property="og:url" content="thekadesikhana.com">
+	<meta property="og:site_name" content="Theka Desi Khana |Get High On Food|">
+	<meta property="og:description" content="Theka Desi Khana |Get High On Food|">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
-  
-
+<script src="js/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 
+<script src="js/jquery-1.11.0.min.js"></script>
+
+
   <script src="js/modernizr-2.7.1.js"></script>
-  
+  <script type="text/javascript">
+  $(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top');
+
+});
+
+  </script>
+  <script type="text/javascript">
+  	  $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'US',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+         
+            
+            comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description of your project'
+                    }
+                    }
+                }
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+
+  </script>
 </head>
 
 <body>
@@ -34,7 +126,7 @@
 					<a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""></a>
 				</div>
 				<div class="queries">
-					<p>Want to get High? Call us <span>7348815961 </span><label>(11AM to 3PM) && (7 pm and 10 pm)</label></p>
+					<p>Food is the healthiest way to get high... Call/Whatsapp us @<span>7348815961</span><label>(11AM to 3PM) && (7 pm to 11 pm)</label></p>
 				</div>
 				<!--div class="header-right">
 						<div class="cart box_1">
@@ -53,18 +145,18 @@
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-						<li class="active"><a href="#Home" class="scroll">Home</a></li>|
-						<li><a href="#">Popular Lunch Menu</a></li>|
-						<li><a href="#">Order</a></li>|
-						<li><a href="#">contact</a></li>
+						<li class="active"><a href="#" class="scroll">Home</a></li>|
+						<li><a href="#typeofLunchBox">Lunch Menu</a></li>|
+						<li><a href="#aboutUs">About Us</a></li>|
+						<li><a href="#contactUs">Contact</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
 				<div class="login-section">
 					<ul>
-						<li><a href="#">Login</a>  </li> |
-						<li><a href="#">Register</a> </li> |
-						<li><a href="#">FeedBack</a></li>
+						<li><a href="#services">Our Services</a> </li> |
+						<li><a href="#FindUs">Find Us</a>  </li> |
+						<li><a href="#feedback">FeedBack</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -75,9 +167,9 @@
 		    <div class="container">
 				<div class="banner-info">
 					<div class="banner-info-head text-center wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-						<h1>Food Is Easiest way to get High</h1>
+						<h1>You are as old as the last time you had good food...</h1>
 						<div class="line">
-							<h2> To Order Online</h2>
+							<h2> </h2>
 						</div>
 					</div>
 					<div class="form-list wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
@@ -94,14 +186,15 @@
 						    </li>
 						  </ul>
 						</form-->
-						</div>
-		 <!--div class="main-search" style="display: none;">
+						<h2 style="text-decoration: white;"> <img src="images/whatsapp.png" style=" display: block;margin: 0 auto;"> </h2>
+					</div>
+		 <div class="main-search" style="display: none;">
 	        <form action="search.html">
 	           <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" class="text">
 	            <input type="submit" value="">
 	        </form>
 	        <div class="close"><img src="images/cross.png"></div>
-	    </div-->
+	    </div>
 	    <!--div class="srch"><button></button></div-->
 		
 					
@@ -115,7 +208,7 @@
 				<div class="ordering-section-head text-center wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInRight;">
 					<h3>Ordering food was never so easy</h3>
 					<div class="dotted-line">
-						<h4>Just 4 steps to follow </h4>
+						<h4>Just 4 steps to Kill Hunger </h4>
 					</div>
 				</div>
 				<div class="ordering-section-grids">
@@ -162,154 +255,100 @@
 				<div class="special-offers-section-grids">
 				 <div class="m_3"><span class="middle-dotted-line"> </span> </div>
 				   <div class="container">
-					  <div class="nbs-flexisel-container"><div class="nbs-flexisel-inner"><ul id="flexiselDemo3" class="nbs-flexisel-ul" style="left: -380px; display: block;">
-						
-					 <li class="nbs-flexisel-item" style="width: 380px;">
+					  <div class="nbs-flexisel-container"><div class="nbs-flexisel-inner"><ul id="flexiselDemo3" class="nbs-flexisel-ul" style=" display: block;">
+						<li class="nbs-flexisel-item" style="width: 380px;padding-top: 58px;">
 							<div class="offer">
 								<div class="offer-image">	
-									<img src="images/p2.jpg" class="img-responsive" alt="">
+									<img src="images/amit.png" class="img-responsive" alt="">
+									<br/>
+									<p style="margin-top: 10px;"> Khai Lo Khana </p><br/><p style="    margin-top: 15px;">Banaras Wala</p>
 								</div>
 								<div class="offer-text">
 									<h4>Weekly Offer</h4>
-									<p>Coming Soon </p>
-									<input type="button" value="Grab It">
+									<p>Get 5 Weekday Meals for Price of 4</p>
+									<a href="#contactUs"><input type="button" value="Grab It"></a>
 									<span></span>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 						</li>
 						<li class="nbs-flexisel-item" style="width: 380px;">
-							<div class="offer">
-								<div class="offer-image">	
-									<img src="images/p2.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="offer-text">
-									<h4>Weekly Offer</h4>
-									<p>Coming Soon </p>
-									<input type="button" value="Grab It">
-									<span></span>
-								</div>
-								<div class="clearfix"></div>
-							</div>
+						<img src="images/logo_bw.png" class="img-responsive" alt="">
+							
 						</li>
-						<li class="nbs-flexisel-item" style="width: 380px;">
+						<li class="nbs-flexisel-item" style="width: 380px;padding-top: 58px;">
 							<div class="offer">
 								<div class="offer-image">	
-									<img src="images/p1.jpg" class="img-responsive" alt="">
+									<img src="images/gogo_Mai_Baap.png" class="img-responsive" alt="">
+									<br/>
+									<p style="margin-top: 10px;"> Aaya hu To Sab</p><br/><p style="    margin-top: 15px;">Kha Kar Jaunga</p>
 								</div>
 								<div class="offer-text">
 									<h4>Monthly Offer</h4>
-									<p>Coming Soon </p>
-									<input type="button" value="Grab It">
+									<p>Get 22 Weekday Meals for Price of 20</p>
+									<a href="#contactUs"><input type="button" value="Grab It"></a>
 									<span></span>
 								</div>
 								
 								<div class="clearfix"></div>
 								</div>
-						</li></ul><div class="nbs-flexisel-nav-left" style="top: 76.5px;"></div><div class="nbs-flexisel-nav-right" style="top: 76.5px;"></div></div></div>
-				 <script type="text/javascript">
-					$(window).load(function() {
+						</li>
 						
-						$("#flexiselDemo3").flexisel({
-							visibleItems: 3,
-							animationSpeed: 1000,
-							autoPlay: false,
-							autoPlaySpeed: 3000,    		
-							pauseOnHover: true,
-							enableResponsiveBreakpoints: true,
-							responsiveBreakpoints: { 
-								portrait: { 
-									changePoint:480,
-									visibleItems: 1
-								}, 
-								landscape: { 
-									changePoint:640,
-									visibleItems: 2
-								},
-								tablet: { 
-									changePoint:768,
-									visibleItems: 3
-								}
-							}
-						});
-						
-					});
-				    </script>
-				    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+					 </ul></div></div>
+				 
 				</div>
 			</div>
 		</div>
 		</div>
-		<div class="popular-restaurents" id="Popular-Restaurants">
+		<div class="popular-restaurents" id="customer">
 			<div class="container">
-				<div class="col-md-4 top-restaurents">
+				<div class="row col-md-12 top-restaurents">
 					<div class="top-restaurent-head">
-						<h3>Our Thekedar Located @ Different compaines</h3>
-					</div>
-					<div class="top-restaurent-grids">
-						<div class="top-restaurent-logos">
-							<div class="res-img-1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-								<img src="images/sears.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/logo_eka.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/1280px-JPMorgan_Chase.svg.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/amadeus.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-1 nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/GE_logo.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/logo.jpg" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/Technicolor_logo.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/Xzorian_logo.png" class="img-responsive" alt="">
-							</div>
-							<div class="res-img-2 nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-							    <img src="images/sabre-logo-slab.png" class="img-responsive" alt="">
-							</div>
+						<h3 align="center-block">Our Hungry Customer @ Different compaines</h3>
+						<br/>
+						<img src="images/Companies.png" class="img-responsive" alt="" style="    height: 300px;width: 100%;">
 
-							<div class="clearfix"></div>
-						</div>
 					</div>
+					
 				</div>
-				<div class="col-md-8 top-cuisines">
-					<div class="top-cuisine-head">
-						<h3>Type Of Lunch Box</h3>
+				</div>
+				</div>
+					<div class="popular-restaurents" id="Popular-menu">
+	
+			<div class="container">
+
+				<div class="row col-md-12 top-cuisines">
+					<div id = "typeofLunchBox" class="top-cuisine-head">
+						<h3>Type Of Meal</h3>
+						<br/>
+						<p style="color: #818181">9 Items to create a Solar System of taste in your mouth!</p>
+
 					</div>
 					<div class="top-cuisine-grids">
 						<div class="top-cuisine-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine1.jpg" class="img-responsive" alt=""> </a>
+						    <a href=""><img src="images/NorthIndianVeg.jpg" class="img-responsive" alt=""> </a>
 							<label>North Indian Veg</label>
 					    </div>
 						<div class="top-cuisine-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine2.jpg" class="img-responsive" alt=""> </a>
-							<label>Panjabi Veg</label>
+						    <a href=""><img src="images/PunjabiVeg.jpg" class="img-responsive" alt=""> </a>
+							<label>Punjabi Veg</label>
 					    </div>
 						<div class="top-cuisine-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine3.jpg" class="img-responsive" alt=""> </a>
-							<label>Udia Veg</label>
+						    <a href=""><img src="images/odiaveg.jpg" class="img-responsive" alt=""> </a>
+							<label>Odia Veg</label>
 					    </div>
 						<div class="top-cuisine-grid nth-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine4.jpg" class="img-responsive" alt=""> </a>
+						    <a href=""><img src="images/NorthIndianNV.jpg" class="img-responsive" alt=""> </a>
 							<label>North Indina Non-Veg</label>
 					    </div>
 						<div class="top-cuisine-grid nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine5.jpg" class="img-responsive" alt=""> </a>
+						    <a href=""><img src="images/OdiaNV.jpg" class="img-responsive" alt=""> </a>
 							<label>Odiya Non Veg</label>
 					    </div>
 						<div class="top-cuisine-grid nth-grid1 wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
-						    <a href=""><img src="images/cuisine6.jpg" class="img-responsive" alt=""> </a>
-							<label>Panjabi NonVeg</label>
+						    <a href=""><img src="images/Punjabi-NV.jpg" class="img-responsive" alt=""> </a>
+							<label>Punjabi NonVeg</label>
 					    </div>
-						
 						
 						<div class="clearfix"></div>
 					</div>
@@ -317,21 +356,15 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<div class="service-section">
+		<div class="service-section" id="services">
 			<div class="service-section-top-row">
 				<div class="container">
 					<div class="service-section-top-row-grids wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInLeft;">
-					<div class="col-md-3 service-section-top-row-grid1">
+					<div class="col-md-12 service-section-top-row-grid1">
 						<h3>Enjoy Exclusive Food Order any of these</h3>
 					</div>
-					<div class="col-md-2 service-section-top-row-grid2">
-					<ul>
-							<li><i class="arrow"></i></li>
-							<li class="lists">Coming Soon</li>
-						</ul>
-
-
-					   <!--div class="col-xs-3 col-sm-4">
+					<div class="col-md-12 service-section-top-row-grid2">
+					   <div class="col-xs-4 col-sm-4">
 						<ul>
 							<li><i class="arrow"></i></li>
 							<li class="lists">Corporate Catering</li>
@@ -341,7 +374,7 @@
 							<li class="lists">Special Pkg For Co-Working Space</li>
 						</ul>
 						</div>
-						<div class="col-xs-3 col-sm-4">
+						<div class="col-xs-4 col-sm-4">
 						<ul>
 							<li><i class="arrow"></i></li>
 							<li class="lists">Special Pkg for Startup Buddies</li>
@@ -355,12 +388,12 @@
 							<li class="lists">Special Pkg for Batchelor's</li>
 						</ul>
 						</div>
-                         <div class="col-xs-3 col-sm-4">
+                         <div class="col-xs-4 col-sm-4">
                          <ul>
 							<li><i class="arrow"></i></li>
 							<li class="lists"> Diet Food </li>
 						</ul>
-						</div-->
+						</div>
 
 						
 
@@ -377,15 +410,207 @@
 					</div>
 				</div>
 			</div>
+			
+			<div id="aboutUs" class="service-section-top-row" style="font-size: 17px;">
+
+				<div class="container">
+					<div class="row">
+            <div class="col-lg-12" style="padding-bottom: 20px;">
+                 <h1 class="page-header">About Us
+                    <small style="">29 States with 29 Meals!</small>
+                </h1>
+                <p style="color: #818181">We are just another food manufacturer who promise to give you quality food, but that food will be from the moments of history for you. A bite of nostalgia, a sip of your hometown, a burp of your memories and a promise of not home made but home like food. India is having one of the widest range of cuisines amongst the world, and we want to serve you all, 29 STATES->29 MEALS. At ThekaDesiKhana we explore the parts of India to dug out treasures of taste and then serve you with pleasure. Also, forgot to mention that all this is available at the most affordable prices.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="images/manoj.jpg" alt="">
+                
+                <h3 style="float: left;">Manoj Thekedar <br/>
+                    <small>Co-Founder</small>
+                </h3>
+                
+					<br/>
+                
+                <p style="float: left;"><a href="https://in.linkedin.com/in/manoj-agarwal-a044053b ">Founder Of Clean Uncle, Ex TCS </a></p>
+                
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="images/ankit.jpg" alt="">
+                <h3 style="float: left;">Anit Thekedar<br/>
+                    <small>Co-Founder</small>
+                </h3><br/>
+
+                <p style="float: left;"><a href="https://www.linkedin.com/in/ankit-gupta-ab666316">Ex MicroSoft, Ex VMware &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </a> </p>
+            </div>
+           <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="images/nand.jpg" alt="">
+                <h3 style="float: left;">Nand Thekedar<br/>
+                    <small>Co-Founder</small>
+                </h3><br/>
+
+                <p style="float: left;"><a href="https://in.linkedin.com/in/nand-singh-46431b1b">Founder Of StayUncle.com, Ex GE  </a></p>
+            </div>
+            
+        </div>
+        <hr>
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div id="contactUs" class="service-section-top-row">
+				<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us!</legend>
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="8762594749" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Your Thought/FeedBack</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Your Suggestion"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+			</div>
+
+			<div class="popular-restaurents" id="feedback">
+			<div class="container" >
+				
+				<div class="col-md-12 top-cuisines">
+					<div class="top-cuisine-head">
+						<h3>FeedBack from Foodies</h3>
+					</div>
+
+				<div id="testimonails">
+        			<div >
+            			
+            			<div class="testimonailsBox">
+                <ul>
+                    
+                    <li>
+                        <div class="testimonailsText">
+                            <p>I won MakeMyDish contest with ThekaDesiKhana and somehow it became a very proud prize for me. I got the dish which I wanted to eat and that too free, not to mention yum as hell!!!</p>
+                        </div>
+                        <div class="customerInfo">
+                            <img src="images/vineet.jpg" alt="aveek">
+                            <div class="cusName">
+                                <p>Vineet Roy</p>
+                                <span>Managing Director</span>
+                                <span>Kronus Kreative Koncepts</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="testimonailsText">
+                            <p>One of the very creative concepts in food industry right now, to bring you food from all corners of India, which they have been able to achieve till now. Hoping to see more, hoping to eat more!!</p>
+                        </div>
+                        <div class="customerInfo">
+                            <img src="images/arpit.jpg" alt="aveek">
+                            <div class="cusName">
+                                <p>Arpit Agrawal</p>
+                                <span>CEO</span>
+                                <span>Enculin.in, Bangalore</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="last-child">
+                        <div class="testimonailsText">
+                            <p>Once Upon a time I was hungry but not anymore. Thanks to ThekaDesiKhana my daily diet of salads, burgers and sandwich got transformed into home made food which takes me back in time daily.</p>
+                        </div>
+                        <div class="customerInfo">
+                            <img src="images/lal.jpg" alt="aveek">
+                            <div class="cusName">
+                                <p>Lala Ratnakar</p>
+                                <span>Managing Director</span>
+                                <span>Kronus Kreative Koncepts</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="service-section-top-row" id="FindUs">
+				<div class="container">
+					<h2>Here We are..</h2>
+					   
+
+												<iframe src="https://www.google.com/maps/d/embed?mid=1qerZyR26BxwKDViNiUOvyFP-JOs" class="col-lg-12" width="640" height="480"></iframe>
+
+						
+					<!--div class="col-md-5 service-section-top-row-grid3">
+						<img src="images/lunch.png" class="img-responsive" alt="">
+					</div-->
+					<!--div class="col-md-2 service-section-top-row-grid4 wow swing animated animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: swing;">
+						<a href="order.html"><input type="submit" value="Order Now"></a>
+					</div-->
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
 			<div class="service-section-bottom-row">
-				<!--div class="container">
+				<div class="container">
 					<div class="col-md-4 service-section-bottom-grid wow bounceIn  animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;">
 						<div class="icon">
 							<img src="images/icon1.jpg" class="img-responsive" alt="">
 						</div>
 						<div class="icon-data">
 							<h4>100% Service Guarantee</h4>
-							<p>Lorem ipsum dolor sit amet, consect-etuer adipiscing elit. </p>
+							<p>If you order, we deliver </p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -394,8 +619,8 @@
 							<img src="images/icon2.jpg" class="img-responsive" alt="">
 						</div>
 						<div class="icon-data">
-							<h4>Fully Secure Payment</h4>
-							<p>Lorem ipsum dolor sit amet, consect-etuer adipiscing elit. </p>
+							<h4>Home Away, Home Like Food! </h4>
+							<p>Carefully crafted daily menus made from suggestions by customers </p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -404,55 +629,97 @@
 							<img src="images/icon3.jpg" class="img-responsive" alt="">
 						</div>
 						<div class="icon-data">
-							<h4>Track Your Order</h4>
-							<p>Lorem ipsum dolor sit amet, consect-etuer adipiscing elit. </p>
+							<h4>Hygienic Food</h4>
+							<p>As pure as snow as tasty as it can get</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
 					<div class="clearfix"></div>
-				</div-->
+				</div>
 			</div>
 		</div>
 		<div class="contact-section" id="contact">
-			<div class="container">
+		     <div class="container">
+		     	  <div class="text-center center-block">
+                <a href="https://www.facebook.com/thekadesikhana/"><img src="images/fb.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+	            <a href="https://plus.google.com/u/0/113575464371747434245"><img src="images/g.png"></a>
+	            &nbsp;&nbsp;&nbsp;&nbsp;
+	            <a href="https://www.zomato.com/bangalore/theka-desi-khana-marathahalli"><img src="images/zomato.png"></a>
+	            &nbsp;&nbsp;&nbsp;&nbsp;
+	            <a href="https://twitter.com/thekaDesiKhana"><img src="images/twitter.png"></a>
+               </div>
+		     </div>
+
+		   
+			<!--div class="container">
 				<div class="contact-section-grids">
 					<div class="col-md-3 contact-section-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-						<h4>Site Links</h4>
+						<h4>Delivery Location</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">About Us</a></li>
+							<li class="data"><a href="#">Embassy Tech Village</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Contact Us</a></li>
+							<li class="data"><a href="#">Eco Space</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Privacy Policy</a></li>
+							<li class="data"><a href="#">Salarpuria, Kadubeesanahalli</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Terms of Use</a></li>
+							<li class="data"><a href="#">Cessana Bussiness Park</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-						<h4>Site Links</h4>
+						<h4></h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">About Us</a></li>
+							<li class="data"><a href="#">Prestige Tech Park</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Contact Us</a></li>
+							<li class="data"><a href="#">Bagmane Bussiness Park</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Privacy Policy</a></li>
+							<li class="data"><a href="#">Emc2</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Terms of Use</a></li>
+							<li class="data"><a href="#">Baagmane Tech Park, ORR</a></li>
 						</ul>
+
+                  <ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#">DiyaSree Technoplois</a></li>
+						</ul>				
+					</div>
+					<div class="col-md-3 contact-section-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+						<h4></h4>
+						<ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#">Marathalli</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#"></a>Bellandur</li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#">Yemalur</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#">Kadabeesanahalli</a></li>
+						</ul>
+
+                  <ul>
+							<li><i class="point"></i></li>
+							<li class="data"><a href="#">DiyaSree Technoplois</a></li>
+						</ul>				
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
 						<h4>Follow Us On...</h4>
@@ -466,24 +733,22 @@
 						</ul>
 						<ul>
 							<li><i class="in"></i></li>
-							<li class="data"><a href="#"> Linkedin</a></li>
+							<li class="data"><a href="https://www.foodpanda.in/restaurant/s0mx/theka-desi-khana?gclid=Cj0KEQiA-f3CBRCbluKf4vu008kBEiQAl-iGq3Li6l8Ci15NcX8ZdbknRl0emvPgz4rye_fqnf3UGT0aAmGE8P8HAQ&ef_id=V-E@OwAAATbJxKYY:20161225094300:s"> FoodPanda</a></li>
 						</ul>
 						<ul>
 							<li><i class="gp"></i></li>
-							<li class="data"><a href="#">Google Plus</a></li>
+							<li class="data"><a href="https://www.zomato.com/bangalore/theka-desi-khana-marathahalli">Zomato</a></li>
 						</ul>
 					</div>
-					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-						<h4>Subscribe Newsletter</h4>
-						<p>To get latest updates and food deals every week</p>
-						<input type="text" class="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-						<input type="submit" value="submit">
-						</div>
+					
 					<div class="clearfix"></div>
 				</div>
-			</div>
+			</div-->
 		</div>
+		
+
 	</div>
-   
+         <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left" style="background-color: rgb(254, 222, 1);    color: black; "><!--span class="glyphicon glyphicon-chevron-up"></span-->Top</a>
+
 </body>
 </html>

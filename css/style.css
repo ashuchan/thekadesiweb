@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 body{
 	padding:0;
 	margin:0;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 body a{
     transition:0.5s all;
@@ -247,7 +247,7 @@ a.simpleCart_empty {
 }
 .line h2{
     color:#FFFFFF;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size:2.6em;
 	font-weight:500;
 }
@@ -284,7 +284,7 @@ a.simpleCart_empty {
 }
 .ordering-section-head h3{
 	color: #515151;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 2.6em;
 	font-weight: 500;
 }
@@ -313,7 +313,7 @@ a.simpleCart_empty {
 }
 .special-offers-section-head h4{
 	color: #515151;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 2em;
 	font-weight: 700;
 }
@@ -323,7 +323,7 @@ a.simpleCart_empty {
 }
 .top-restaurent-head h3{
 	color: #515151;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 2.1em;
 	font-weight: 700;
 }
@@ -349,7 +349,7 @@ a.simpleCart_empty {
 }
 .top-cuisine-head h3{
 	color: #515151;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 2.1em;
 	font-weight: 700;
 }
@@ -498,9 +498,9 @@ a.simpleCart_empty {
 	width: 68%;
 }
 .icon-data h4{
-	color:#5BBD50;
+	color:#010101;
 	font-size:1.4em;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-weight:700;
 	margin:0.8em 0 0.5em 0;
 }
@@ -516,7 +516,7 @@ a.simpleCart_empty {
 .service-section-top-row-grid1 h3{
 	font-size:2.3em;
 	font-weight:500;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	color:#FFCC00;
 	padding-top: 1em;
 }
@@ -567,14 +567,14 @@ a.simpleCart_empty {
 	line-height:1.2em;
 }
 .contact-section{
-	padding:3em 0;
+	padding:0em 0;
 	background:#515151;
 }
 .contact-section-grid h4{
 	color:#FFFFFF;
 	font-size:1.5em;
 	font-weight:700;
-	font-family: 'Lobster Two', cursive;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	margin-bottom:1.2em;
 }
 .contact-section-grid ul li{
@@ -2786,7 +2786,7 @@ a.morebtn{
 		margin: 0.5em 0 2em 0;
 	}
 	.ordering-section-grid {
-		width: 25%;
+		width: 24%;
 		float: left;
 	}
 	.ordering-section-grid {
@@ -3070,7 +3070,7 @@ a.morebtn{
 		padding: 2em 0 1em 0;
 	}
 	.restaurent-logo {
-		width: 25%;
+		width: 24%;
 		float: left;
 	}
 	.col-md-2.restaurent-title {
@@ -4124,4 +4124,87 @@ a.morebtn {
   float: left;
   width: 69%;
 }
+}
+
+#testimonails .testimonailsBox{}
+#testimonails .testimonailsBox li{ float:left; display:block; width:310px; margin-right:80px;}
+#testimonails .testimonailsBox li.last-child{ margin-right:0;}
+#testimonails .testimonailsBox li .testimonailsText{ 
+	background:#f7f7f7;
+	border-radius:6px;
+	-webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:0 3px 0 rgba(0, 0, 0, 0.05);
+	box-shadow:0 3px 0 rgba(0, 0, 0, 0.05);
+	padding:28px;
+	position:relative;
+	height:184px;
+}
+#testimonails .testimonailsBox li .testimonailsText p{ font-size:15px; color:#8e98a0; font-weight:400; line-height:26px;}
+#testimonails .testimonailsBox li .testimonailsText p:after{ content:''; background:url(../images/apostropheBot.gif) no-repeat; display:inline-block; margin:-3px 0 0 10px; height:22px; width:27px;}
+#testimonails .testimonailsBox li .testimonailsText p:before{ content:''; background:url(../images/apostropheTop.gif) no-repeat; display:inline-block; margin:-3px 10px 0 0; height:22px; width:27px;}
+#testimonails .testimonailsBox li .testimonailsText:after{ content:''; background:url(../images/testimonailBoxArrow.gif) no-repeat; display:block; height:13px; width:23px; position:absolute;  bottom: -13px; left: 146px;}
+#testimonails .testimonailsBox li .customerInfo{ margin-top:20px;}
+#testimonails .testimonailsBox li .customerInfo img{ display:block; float:left; height:93px; width:94px}
+#testimonails .testimonailsBox li .customerInfo .cusName{ float:left; margin-left:20px; margin-top:18px;}
+#testimonails .testimonailsBox li .customerInfo .cusName p{font-size:16px; color:#37444d; font-weight:400; margin-bottom:10px;}
+#testimonails .testimonailsBox li .customerInfo .cusName span{ display:block; font-size:14px; color:#9da6ad; font-weight:400; margin-bottom:5px;}
+
+#testimonails .testimonailsBox{}
+#testimonails .testimonailsBox li{ float:left; display:block; width:310px; margin-right:80px;}
+#testimonails .testimonailsBox li.last-child{ margin-right:0;}
+#testimonails .testimonailsBox li .testimonailsText{ 
+	background:#f7f7f7;
+	border-radius:6px;
+	-webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:0 3px 0 rgba(0, 0, 0, 0.05);
+	box-shadow:0 3px 0 rgba(0, 0, 0, 0.05);
+	padding:28px;
+	position:relative;
+	height:220px;
+}
+#testimonails .testimonailsBox li .testimonailsText p{ font-size:15px; color:#8e98a0; font-weight:400; line-height:26px;}
+#testimonails .testimonailsBox li .testimonailsText p:after{ content:''; background:url(../images/apostropheBot.gif) no-repeat; display:inline-block; margin:-3px 0 0 10px; height:22px; width:27px;}
+#testimonails .testimonailsBox li .testimonailsText p:before{ content:''; background:url(../images/apostropheTop.gif) no-repeat; display:inline-block; margin:-3px 10px 0 0; height:22px; width:27px;}
+#testimonails .testimonailsBox li .testimonailsText:after{ content:''; background:url(../images/testimonailBoxArrow.gif) no-repeat; display:block; height:13px; width:23px; position:absolute;  bottom: -13px; left: 146px;}
+#testimonails .testimonailsBox li .customerInfo{ margin-top:20px;}
+#testimonails .testimonailsBox li .customerInfo img{ display:block; float:left; height:93px; width:94px}
+#testimonails .testimonailsBox li .customerInfo .cusName{ float:left; margin-left:20px; margin-top:18px;}
+#testimonails .testimonailsBox li .customerInfo .cusName p{font-size:16px; color:#37444d; font-weight:400; margin-bottom:10px;}
+#testimonails .testimonailsBox li .customerInfo .cusName span{ display:block; font-size:14px; color:#9da6ad; font-weight:400; margin-bottom:5px;}
+
+
+#success_message{ display: none;}
+
+.popular-restaurents {
+    border-top: 2px solid #F1F1F1;
+    border-bottom: 2px solid #F1F1F1;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+
+.offerCentre {
+    background: #f1f1f1;
+    padding: 1.3em;
+    border-radius: 6px;
+}
+
+.offerCentre-image {
+    float: left;
+    width: 50%;
+    margin-right: 4%;
 }
